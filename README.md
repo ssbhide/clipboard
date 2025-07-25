@@ -6,7 +6,7 @@ This Chrome extension acts as a personalized clipboard manager, allowing you to 
 
 ## Why I Built This Project
 
-As someone who often fills out job applications, I found myself constantly copying and pasting the same pieces of information – job experience descriptions, project summaries, skills lists, and common introductory phrases – from my resume or other documents. This repetitive switching between tabs and documents was inefficient and time-consuming.
+As someone who often fills out job applications, I found myself constantly copying and pasting the same pieces of information such as job experience descriptions, project summaries, skills lists, and common introductory phrases from my resume or other documents. This repetitive switching between tabs and documents was inefficient and time-consuming.
 
 I also realized this challenge extends beyond job applications to any task involving repeated text entry, like:
 * Common email phrases.
@@ -14,7 +14,7 @@ I also realized this challenge extends beyond job applications to any task invol
 * Personal details for forms.
 * Standard greetings or closings.
 
-The goal of this extension is to centralize these frequently used text items right within Chrome's browser environment, eliminating the need to navigate away from the current page to find and copy content. By providing a quick and easy way to "clip" these items and then copy them to the system clipboard from a simple popup, it aims to significantly streamline workflows and boost productivity.
+The goal of this extension is to centralize these frequently used text items right within Chrome's browser environment, eliminating the need to navigate away from the current page to find and copy content. By providing a quick and easy way to "clip" these items and then copy them to the system clipboard from a simple popup, it aims to streamline these tedious task and maximize efficiency.
 
 ## Features
 
@@ -41,7 +41,7 @@ The goal of this extension is to centralize these frequently used text items rig
 
 4.  **Load the Extension:**
     * Click the **"Load unpacked"** button that appears.
-    * Navigate to the folder where you saved the extension's files (e.g., `chrome_clipboard_extension`) and select it.
+    * Navigate to the folder where you saved the extension's files (e.g., `clipboard`) and select it.
 
 5.  **Pin the Extension (Optional but Recommended):**
     * Click the puzzle piece icon (Extensions icon) in your Chrome toolbar.
