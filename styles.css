@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 350px; /* Make the overall popup wider */
+    min-height: 200px; /* Give it a minimum height */
+    max-height: 580px; /* Max height to avoid scrollbars if content is small */
+    overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+    margin: 0;
+    padding: 15px;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between sections */
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    color: #34495e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #clipboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between clipboard items */
+  }
+  
+  .clipboard-item {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc; /* Subtle border */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 12px 15px;
+    cursor: pointer; /* Indicate it's clickable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    display: flex; /* Use flexbox for layout inside the item */
+    justify-content: space-between; /* Space text and buttons */
+    align-items: center;
+  }
+  
+  .clipboard-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+  }
+  
+  .item-text {
+    flex-grow: 1; /* Allow text to take up available space */
+    font-size: 15px;
+    color: #4a4a4a;
+    word-wrap: break-word; /* Ensure long text wraps */
+    max-width: calc(100% - 70px); /* Adjust based on button width */
+  }
+  
+  .item-actions {
+    display: flex;
+    gap: 8px; /* Space between buttons */
+    margin-left: 10px;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c; /* Red for delete */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .add-new-section {
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    min-height: 60px;
+    max-height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  button#addItemBtn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #3498db; /* Blue for add button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button#addItemBtn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Subtle Copy Notification */
+  .copy-notification {
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(46, 204, 113, 0.9); /* Greenish background, slightly transparent */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px; /* Pill shape */
+    font-size: 14px;
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Allow clicks to pass through */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .copy-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px); /* Move slightly up */
+  }
+  
+  /* Scrollbar styling (optional, for aesthetics) */
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
